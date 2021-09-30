@@ -1,0 +1,9 @@
+﻿"","Income","Limit","Rating","Cards","Age","Education","Gender","Student","Married","Ethnicity","Balance"
+"401",14.891,5606,483,2,34,11," Male","No","No","Caucasian",333
+"402",106.025,6645,483,3,82,15,"Female","No","No","Asian",903
+"403",134.593,7075,514,4,71,11," Male","No","Yes","African American",580
+"404",158.924,10504,881,4,40,16,"Female","No","Yes","Caucasian",64
+"405",55.882,4897,357,2,68,16," Male","Yes","No","Caucasian",33
+"406",20.996,3388,259,2,37,12,"Female","Yes","No","African American",2030
+"407",31.408,7114,512,2,87,9," Male","Yes","Yes","Asian",2040
+"408",12.125,3300,266,5,66,13,"Female","Yes","Yes","Caucasian",1500
