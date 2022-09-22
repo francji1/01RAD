@@ -1,0 +1,142 @@
+---
+title: "1. zápočtová úloha z 01RAD"
+author: "Jiří Franc"
+date: "2021-10-21"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+#  1. zápočtová úloha z 01RAD
+
+## Popis úlohy
+
+V tomto úkolu je cílem provést předzpracování datového souboru, jeho vizualizaci a jednoduchou lineární regresní úlohu, kde budeme modelovat spotřebu automobilu v závislosti na jeho váze. K tomuto účelu poslouží datový souboru \texttt{auto\_mpg\_2021rad.txt}, který obsahuje 406 pozorování o 9 proměnných. Dataset byl prvně použit americkou statistickou společností v roce  1983 a lze ho též najít na  UCI Machine Learning Repository, případně na kaggle.com s několika pracovními sešity.
+
+
+```{r, echo=FALSE,include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(GGally)
+library(knitr)
+library(pander)
+```
+```{r, echo=FALSE}
+#print(getwd())
+auta <- read.table(file="auto_mpg_2021rad.txt",header=TRUE)
+knitr::kable(head(auta))
+#pander(head(auta))
+```
+
+
+## Podmínky a body
+
+Úkol i protokol vypracujte samostatně. Pokud na řešení nějaké úlohy budete přesto s někým spolupracovat, radit se, nezapomeňte to u odpovědi na danou otázku uvést. Tato zápočtová úloha obsahuje 10 otázek po 1 bodu. Celkem za 3 zápočtové úlohy bude možné získat 30 bodů, přičemž pro získání zápočtu je potřeba více jak 20 bodů. Další dodatečné body mohu případně individuálně udělit za řešení mini domácích úkolů z jednotlivých hodin.
+
+## Odevzdání
+
+Protokol ve formátu pdf odevzdejte prostřednictvím MS Teams, nejpozději do 10. 11. 2021.
+
+# Předzpracování dat:
+
+## Otázka 01
+
+Zjistěte, zdali data neobsahují chybějící hodnoty (\texttt{NA}). Pokud ano, tak rozhodněte zdali můžete příslušná pozorování z dat odstranit a proč. Které proměnné jsou kvantitativní a které kvalitativní? Jeli možno některé zařadit do obou skupin, pro kterou se rozhodnete? Které proměnné budete brát jako faktorové a proč? Spočtěte základní statistiky pro jednotlivé proměnné.
+
+
+```{r, echo=FALSE}
+colSums(is.na(auta))
+
+
+```
+
+
+
+## Otázka 02
+
+Proměnnou \texttt{mpg} nahraďte proměnnou \texttt{spotreba} kde bude místo počtu ujetých mil na galon paliva uvedena hodnota počet litrů na 100 Km.  Proměnnou \texttt{cylinders} přejmenujte na  \texttt{pocet\_valcu}. Proměnnou \texttt{displacement} přejmenujte na  \texttt{zdvihovy\_objem} a převeďte z kubických palců na litry. Proměnnou  \texttt{horsepower} přejmenujte na \texttt{výkon} a převeďte na kW. Proměnnou \texttt{weight} přejmenujte na  \texttt{hmotnost} a převeďte z liber na kilogramy. Odstraňte proměnnou \texttt{acceleration}. Proměnnou \texttt{model.year} přejmenujte na \texttt{rok\_vyroby} a upravte ji tak, aby její hodnoty popisovaly celý rok 19XX. Proměnnou \texttt{origin} přejmenujte na \texttt{puvod} a upravte ji tak, že místo 1 bude USA, místo 2 EUR a místo 3 JAP. Z proměnné  \texttt{car.name} vytvořte proměnnou  \texttt{vyrobce} podle prvního slova obsaženého v řetězci proměnné  \texttt{car.name}.
+
+```{r, echo=FALSE}
+
+```
+
+# Vizualizace dat
+
+## Otázka 03 
+
+Vykreslete scatterploty pro všechny numerické proměnné. Pro proměnné \texttt{spotreba} a \texttt{hmotnost} vykreslete histogramy spolu s jádrovými odhady hustot. Pro proměnné \texttt{pocet\_valcu} a \texttt{rok\_vyroby} vykreslete krabicové diagramy, kde odezvou bude \texttt{spotreba}.  Je z těchto grafů vidět, že některá auta mají jinou, než očekávanou spotřebu? Navrhněte úpravu těchto dvou proměných (případně úpravu datasetu) tak, aby obě proměnné  \texttt{pocet\_valcu} a \texttt{rok\_vyroby} byly faktorové a obsahovaly právě 3 úrovně. Pro takto upravená data vykreslete místo výše zmííněných boxplotů violin ploty.
+
+```{r, echo=FALSE}
+
+```
+
+
+## Otázka 04
+
+Pro kombinace faktorizovaných proměnných \texttt{pocet\_valcu}, \texttt{rok\_vyroby} a \texttt{puvod} vykreslete spotřebu aut, aby bylo na obrázku vidět, jestli se liší spotřeba u aut pocházejících z různých kontinentů v závislosti na počtu válců, roku výroby a naopak. Zobrazte jen kombinace s relevantním počtem dat.
+```{r, echo=FALSE}
+
+```
+
+## Otázka 05
+
+Pro auta výrobce Chrysler vykreslete závislost spotřeby na váze automobilu, kde jednotlivé události označíte barvou podle počtu válců a velikost bodů v grafu bude odpovídat objemu motoru.
+```{r, echo=FALSE}
+
+
+```
+
+# Jednoduchý lineární model
+
+
+## Otázka 06
+
+Sestavte jednoduchý regresní model (s i bez interceptu), kde vysvětlovaná proměnná
+bude spotřeba automobilu.   Spočtěte pro oba modely $R^2$ a $F$ statistiky, co nám o modelech říkají. Vyberte jeden z nich a zdůvodněte proč ho preferujete. Na základě zvoleného modelu zjistěte, zdali spotřeba automobilu závisí na hmotnosti automobilu. Pokud ano, o kolik se změní očekávaná spotřeba automobilu pokud se jeho hmotnost zvýší o 1000kg? 
+```{r, echo=FALSE}
+
+```
+
+
+
+## Otázka 07
+Sestavte obdobný model jako v předchozí otázce, ale pouze na základě dat výrobce Chrysler. Liší se tento model od předchozího? Jaký model vykazuje silnější linearní vztah mezi hmotností a spotřebou a proč? O kolik roste spotřeba s rostoucí hmotností pro vozy Chrysler rychleji než pro libovolný automobil? 
+Spočtěte 95% konfidenční intervaly pro regresní koeficienty popisující sklon regresnní přímky v obou modelech a zjistěte, zdali se protínají? Co z toho můžeme vyvozovat?
+Na základě těchto modelů zjistěte o kolik procent bude mít automobil značky Chrysler a hmotnosti 1,5 tuny vyšší očekávanou spotřebu než průměrný automobil o stejné hmotnosti.
+
+```{r, echo=FALSE}
+
+```
+
+## Otázka 08
+
+Vykreslete scatterplot hmotností automobilů a jejich spotřeby. Do tohoto grafu vykreslete regresní přímku modelu s interceptem i bez. Sestrojte navíc lineární model, kde budete uvažovat, že spotřeba závisí na kvadrátu hmotnosti. Příslušnou křivku popisující odhady středních hodnot z tohoto modelu přidejte do obrázku k oboum předchozím modelům. Pro účely predikce spotřeby automobilů, na základě jakých statistik byste mezi těmito modely vybírali, nebo byste se rozhodovali na základě něčeho jiného a proč?
+```{r, echo=FALSE}
+
+```
+
+
+## Otázka 09
+
+
+Pro vámi vybraný finální lineární model popisující vztah mezi hmotností a spotřebou automobilu ověřte předpoklady pro použití metody nejmenších čtverců. Každý předpoklad zmiňte a uveďte jak byste ho validovali pomocí reziduí. 
+
+```{r, echo=FALSE}
+
+```
+
+
+
+
+
+## Otázka 10
+
+Přidejte k vysvětlující proměné \texttt{hmotnost}, i proměnnou \texttt{puvod}. Navrhněte
+aditivní lineární model (případně 3 modely pro každý region zvlášť), ve scatterplotu vykreslete 3 skupiny různými barvami a data proložte třemi odpovídajícími regresními přímkami. Uvažujeme 3 auta o hmotnosti 2 tuny zastupující jednotlivé regiony původu. Sestrojte 90% konfidenční intervaly okolo očekávaných spotřeb a na jejich základě rozhodněte, zdali a jak se očekávané spotřeby budou lišit. Je to porovnávání správné? Zdůvoněte.
+```{r, echo=FALSE}
+
+```
