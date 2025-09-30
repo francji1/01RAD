@@ -3,10 +3,8 @@
 .RData
 .Ruserdata
 .Renviron
-
 R/.Rhistory
-plots/
+
+
 private/
-R/old/
-HW/
-pdf/old/
+code/2024
