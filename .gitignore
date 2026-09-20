@@ -8,3 +8,17 @@ R/.Rhistory
 
 private/
 code/2024
+# tooling / editor / agent working dirs - never publish
+.claude/
+.remember/
+.vscode/
+.idea/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+tmp_*.py
+
+# catch-all: any hidden directory
+.*/

@@ -1,46 +1,37 @@
 # Regression Data Analysis (01RAD)
 
-Welcome to the repository for the **01RAD - Regression Data Analysis** course. This repository contains all the materials needed to follow along with the course, including assignments, code examples, and datasets.
+Materials for the exercises of **01RAD - Regresni analyza dat** at FJFI CTU in Prague, winter semester 2026/27.
+Lectures: doc. Tomas Hobza. Exercises: Jiri Franc.
 
-## Repository Structure
+## Repository structure
 
-The repository is organized as follows:
+- **`code/`**
+  Jupyter notebooks for the exercises, named `01RAD_ExNN.ipynb`. Notebooks are added weekly as the semester progresses.
+  Homework assignments are published as `01RAD_ExNN_HW.ipynb` together with the exercise; a selected student solution and a reference solution follow a week later.
 
-- **`assignments/`**  
-  Contains the course assignments. Subfolders are organized by year (e.g., `2024/`) and include instructions and related materials.
+- **`data/`**
+  Datasets used in the notebooks. Load them directly from GitHub, for example
+  `https://raw.githubusercontent.com/francji1/01RAD/main/data/fsdata.csv`.
 
-- **`code/`**  
-  Includes Python scripts and Jupyter notebooks demonstrating key concepts in regression analysis. The code is structured by topic or lecture.
+- **`lectures/`**
+  Lecture slides (PDF).
 
-- **`data/`**  
-  This directory contains datasets used in the course for practice, assignments, and demonstrations. Each dataset includes a brief description.
+## How to run the notebooks
 
-## Course Overview
+- Open any notebook in Google Colab via the badge at its top, or
+- clone the repository and run locally with Python 3.11+ and
 
-The **Regression Data Analysis** course provides a comprehensive introduction to the fundamentals and applications of regression analysis. Topics include:
+  ```bash
+  pip install numpy pandas scipy statsmodels matplotlib seaborn scikit-learn
+  ```
 
-1. Simple and multiple linear regression  
-2. Assumptions of regression models and diagnostics  
-3. Handling multicollinearity and model selection  
-4. Transformations and interaction terms  
-5. Applications in real-world scenarios  
+## Course overview
 
-### Learning Outcomes
+1. Simple linear regression: least squares and maximum likelihood estimates, Gauss-Markov theorem, confidence intervals and tests, ANOVA table, prediction.
+2. Multiple linear regression: matrix formulation, hat matrix, properties of estimators, general linear hypothesis.
+3. Residuals, diagnostics and influence measures.
+4. Transformations, Box-Cox, weighted least squares.
+5. Model selection: information criteria, stepwise procedures.
+6. Collinearity and ridge regression; extensions to robust and regularised regression.
 
-By the end of this course, students will:
-
-- Understand the principles of regression analysis and its assumptions.  
-- Be able to build, evaluate, and interpret regression models.  
-- Learn how to diagnose and resolve common problems in regression.  
-- Gain experience working with real-world data and applying regression techniques effectively.
-
-## Prerequisites
-
-- Basic programming knowledge (preferably Python).  
-- A solid foundation in mathematics and statistics, including linear algebra and probability.
-
-## How to Use This Repository
-
-1. Clone the repository to your local machine:  
-   ```bash
-   git clone <repository_url>
+Materials from previous years are available in the git history.
