@@ -7,7 +7,11 @@ Lectures: doc. Tomas Hobza. Exercises: Jiri Franc.
 
 - **`code/`**
   Jupyter notebooks for the exercises, named `01RAD_ExNN.ipynb`. Notebooks are added weekly as the semester progresses.
-  Homework assignments are published as `01RAD_ExNN_HW.ipynb` together with the exercise; a selected student solution and a reference solution follow a week later.
+  Homework assignments are published as `01RAD_ExNN_HW.ipynb` together with the exercise.
+
+- **`HW/`**
+  Homework assignments and submissions. Solve the assignment and open a pull request that adds your notebook as
+  `HW/01RAD_ExNN_HW_<Surname>.ipynb`; see `HW/README.md`. A selected student solution and a reference solution follow a week later.
 
 - **`data/`**
   Datasets used in the notebooks. Load them directly from GitHub, for example
