@@ -11,7 +11,7 @@ Lectures: doc. Tomas Hobza. Exercises: Jiri Franc.
 
 - **`HW/`**
   Homework assignments and submissions. Solve the assignment and open a pull request that adds your notebook as
-  `HW/01RAD_ExNN_HW_<Surname>.ipynb`; see `HW/README.md`. A selected student solution and a reference solution follow a week later.
+  `HW/01RAD_ExNN_HW_<Surname>.ipynb`; see `HW/README.md`. A selected student solution follows a week later, with a reference solution when needed.
 
 - **`data/`**
   Datasets used in the notebooks. Load them directly from GitHub, for example

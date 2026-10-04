@@ -10,4 +10,4 @@ Assignments are published in this folder as `01RAD_ExNN_HW.ipynb` together with 
 
 Keep the file name pattern and do not change other files in the pull request. If the notebook is larger than a few MB, clear the largest outputs before submitting.
 
-A week after the deadline one selected student solution and one reference solution are published here as `01RAD_ExNN_HW_solution_student.ipynb` and `01RAD_ExNN_HW_solution_ai.ipynb`.
+A week after the deadline one selected student solution is published here as `01RAD_ExNN_HW_solution_student.ipynb`; a reference solution `01RAD_ExNN_HW_solution_ai.ipynb` is added only when the submitted solutions leave something to correct.
