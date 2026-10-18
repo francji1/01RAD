@@ -20,6 +20,16 @@ Lectures: doc. Tomas Hobza. Exercises: Jiri Franc.
 - **`lectures/`**
   Lecture slides (PDF).
 
+## Exercises so far
+
+| Exercise | Topic | Homework |
+|---|---|---|
+| [Ex00](code/01RAD_Ex00.ipynb) | Working in Python notebooks | |
+| [Ex01](code/01RAD_Ex01.ipynb) | Simple linear regression | [HW01](HW/01RAD_Ex01_HW.ipynb) Cars braking distance |
+| [Ex02](code/01RAD_Ex02.ipynb) | Inference in simple linear regression | [HW02](HW/01RAD_Ex02_HW.ipynb) Regression to the mean |
+| [Ex03](code/01RAD_Ex03.ipynb) | ANOVA table, $R^2$, prediction and residuals | [HW03](HW/01RAD_Ex03_HW.ipynb) Shortleaf pines |
+| [Ex04](code/01RAD_Ex04.ipynb) | Multiple linear regression through linear algebra | [HW04](HW/01RAD_Ex04_HW.ipynb) House prices (team work, due 1 November) |
+
 ## How to run the notebooks
 
 - Open any notebook in Google Colab via the badge at its top, or
