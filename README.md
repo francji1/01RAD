@@ -31,6 +31,7 @@ Lectures: doc. Tomas Hobza. Exercises: Jiri Franc.
 | [Ex04](code/01RAD_Ex04.ipynb) | Multiple linear regression through linear algebra | [HW04](HW/01RAD_Ex04_HW.ipynb) House prices (team work, due 1 November) |
 | [Ex05](code/01RAD_Ex05.ipynb) | Dummy variables, properties of the estimates, residuals | (HW04 continues) |
 | [Ex06](code/01RAD_Ex06.ipynb) | $F$-tests, the general linear hypothesis, prediction | |
+| [Ex07](code/01RAD_Ex07.ipynb) | Residuals and graphical diagnostics | |
 
 ## How to run the notebooks
 
