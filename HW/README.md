@@ -16,6 +16,7 @@ Each homework is due on **Sunday of the week in which it was assigned (23:59)**,
 |---|---|---|
 | HW01, HW02, HW03 | individual | Sunday of the same week |
 | HW04 | team of 2–3 students, one pull request per team | Sunday 1 November 2026, 23:59 |
+| HW08 | individual | Sunday 29 November 2026, 23:59 |
 
 Keep the file name pattern and do not change other files in the pull request. In particular, never save your work over the assignment `01RAD_ExNN_HW.ipynb`: in Colab use *File → Save a copy in GitHub* and choose your own file name, and check the *Files changed* tab of your pull request before submitting. If the notebook is larger than a few MB, clear the largest outputs before submitting.
 

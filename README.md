@@ -32,6 +32,7 @@ Lectures: doc. Tomas Hobza. Exercises: Jiri Franc.
 | [Ex05](code/01RAD_Ex05.ipynb) | Dummy variables, properties of the estimates, residuals | (HW04 continues) |
 | [Ex06](code/01RAD_Ex06.ipynb) | $F$-tests, the general linear hypothesis, prediction | |
 | [Ex07](code/01RAD_Ex07.ipynb) | Residuals and graphical diagnostics | |
+| [Ex08](code/01RAD_Ex08.ipynb) | Outliers, influential observations, robust regression | [HW08](HW/01RAD_Ex08_HW.ipynb) Robust regression and least weighted squares (due 29 November) |
 
 ## How to run the notebooks
 
